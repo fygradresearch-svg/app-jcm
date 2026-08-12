@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* ── Academic design system (publication-quality) ── */
+@layer base {
+  :root {
+    --color-paper: #faf9f7;
+    --color-paper-elevated: #ffffff;
+    --color-ink: #1a202c;
+    --color-ink-muted: #4a5568;
+    --color-ink-subtle: #718096;
+    --color-border: #e2e8f0;
+    --color-border-strong: #cbd5e0;
+    --color-navy: #1a365d;
+    --color-navy-light: #2c5282;
+    --color-accent: #2c7a7b;
+    --color-accent-muted: #e6fffa;
+    --color-level-high: #2c7a7b;
+    --color-level-mid: #b7791f;
+    --color-level-low: #9b2c2c;
+    --font-serif: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+    --font-sans: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+}
+
+/* ── Reusable academic components ── */
+@layer components {
+  .academic-panel {
+    @apply bg-white rounded-lg border border-[var(--color-border)] shadow-sm;
+  }
+
+  .section-eyebrow {
+    @apply text-[10px] font-semibold uppercase tracking-[0.12em] text-[var(--color-ink-subtle)];
+    font-family: var(--font-sans);
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-[var(--color-ink)];
+    font-family: var(--font-serif);
+  }
+
+  .figure-caption {
+    @apply text-xs text-[var(--color-ink-muted)] italic leading-relaxed;
+    font-family: var(--font-serif);
+  }
+
+  .scientific-table thead tr {
+    @apply bg-[#f7fafc] border-b border-[var(--color-border-strong)];
+  }
+
+  .scientific-table th {
+    @apply py-3 px-4 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-ink-subtle)];
+    font-family: var(--font-sans);
+  }
+
+  .scientific-table td {
+    @apply py-3.5 px-4 text-sm text-[var(--color-ink)];
+  }
+
+  .kpi-value {
+    font-family: var(--font-mono);
+    @apply font-semibold text-[var(--color-ink)] tabular-nums;
+  }
+
+  .nav-active {
+    @apply bg-[var(--color-navy)] text-white;
+  }
+
+  .badge-level-alto {
+    @apply bg-[#e6fffa] text-[#234e52] border border-[#b2f5ea];
+  }
+
+  .badge-level-medio {
+    @apply bg-[#fffbeb] text-[#744210] border border-[#fbd38d];
+  }
+
+  .badge-level-bajo {
+    @apply bg-[#fff5f5] text-[#742a2a] border border-[#feb2b2];
+  }
+}
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* ── Leaflet ── */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background-color: #edf2f7 !important;
+}
+
+.leaflet-bar {
+  border: 1px solid var(--color-border) !important;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.08) !important;
+}
+
+.leaflet-bar a {
+  background-color: #ffffff !important;
+  color: var(--color-ink) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #f7fafc !important;
+}
+
+/* ── Print layout ── */
+@media print {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 10pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 100%;
+    page-break-after: always;
+  }
+
+  .academic-panel {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* ── Animations ── */
+@keyframes slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.2s ease-out;
+}
