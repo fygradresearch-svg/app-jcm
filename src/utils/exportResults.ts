@@ -99,7 +99,7 @@ export function exportRankingToXlsx(ranking: TopsisRow[], markets: Market[], cri
   <Table>
    <Row ss:Height="20">
     <Cell ss:StyleID="Header"><Data ss:Type="String">Mercado</Data></Cell>
-    <Cell ss:StyleID="Header"><Data ss:Type="String">GFSI (C1)</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Quality &amp; Safety (C1)</Data></Cell>
     <Cell ss:StyleID="Header"><Data ss:Type="String">Importaciones t (C2)</Data></Cell>
     <Cell ss:StyleID="Header"><Data ss:Type="String">LPI (C3)</Data></Cell>
     <Cell ss:StyleID="Header"><Data ss:Type="String">Arancel % (C4)</Data></Cell>

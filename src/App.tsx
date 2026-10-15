@@ -70,12 +70,12 @@ export const App: React.FC = () => {
   useEffect(() => {
     // Expected order and values
     const expected = [
-      { id: 'us', cc: 0.680 },
-      { id: 'de', cc: 0.522 },
-      { id: 'ca', cc: 0.472 },
-      { id: 'fr', cc: 0.367 },
-      { id: 'uk', cc: 0.352 },
-      { id: 'nl', cc: 0.321 }
+      { id: 'us', cc: 0.6019 },
+      { id: 'de', cc: 0.5958 },
+      { id: 'fr', cc: 0.5244 },
+      { id: 'nl', cc: 0.4674 },
+      { id: 'ca', cc: 0.4458 },
+      { id: 'uk', cc: 0.3976 }
     ];
 
     const results = baseRanking;

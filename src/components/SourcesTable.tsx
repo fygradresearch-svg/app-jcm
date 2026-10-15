@@ -78,16 +78,16 @@ export const SourcesTable: React.FC<SourcesTableProps> = ({ sources }) => {
         </h4>
         <ul className="list-disc pl-5 space-y-2 text-slate-600 leading-relaxed">
           <li>
-            <strong>GFSI (Global Food Security Index):</strong> Publicado por Economist Impact, evalúa la asequibilidad, disponibilidad, calidad e inocuidad de los alimentos, así como la sostenibilidad y adaptación de recursos en 113 países.
+            <strong>Quality and Safety (GFSI 2022):</strong> Subíndice publicado por Economist Impact, utilizado como proxy contextual del entorno nacional de calidad e inocuidad; no acredita admisibilidad sanitaria del producto.
           </li>
           <li>
-            <strong>Importaciones de fresa congelada (HS 081110):</strong> Volumen anual importado por cada país destino en el año comercial 2022, obtenido de UN Comtrade y procesado mediante WITS (World Integrated Trade Solution). El código arancelario HS 081110 corresponde a fresas sin cocer o cocidas al vapor o en agua hirviendo, congeladas.
+            <strong>Importaciones de fresa congelada (HS 081110):</strong> Volumen anual importado por cada país destino en 2023, obtenido de UN Comtrade y procesado mediante WITS (World Integrated Trade Solution). El código HS 081110 corresponde a fresas congeladas.
           </li>
           <li>
             <strong>LPI (Logistics Performance Index):</strong> Índice multidimensional del Banco Mundial que mide la eficiencia de las aduanas, la calidad de la infraestructura de transporte y la facilidad de organizar embarques internacionales competitivos.
           </li>
           <li>
-            <strong>Arancel efectivo aplicado:</strong> Tasas arancelarias preferenciales o ad valorem aplicadas de forma directa a las importaciones peruanas bajo los Acuerdos Comerciales vigentes entre el Perú y cada mercado de destino para el periodo fiscal 2025-2026.
+            <strong>Arancel de referencia:</strong> Matriz de trabajo con corte de octubre de 2026 para mercancía de origen peruano. Estados Unidos registra 12,5 % y los otros cinco destinos 0 %; no incluye barreras no arancelarias ni impuestos internos.
           </li>
         </ul>
       </div>

@@ -5,11 +5,11 @@ export const criteriaList: Criterion[] = [
     id: 'c1',
     code: 'C1',
     name: 'Seguridad alimentaria y cumplimiento normativo',
-    indicator: 'Global Food Security Index - GFSI',
+    indicator: 'Quality and Safety — GFSI 2022',
     unit: '0-100',
     type: 'benefit',
-    weight: 0.517,
-    percentage: 51.7
+    weight: 0.30598,
+    percentage: 30.6
   },
   {
     id: 'c2',
@@ -18,8 +18,8 @@ export const criteriaList: Criterion[] = [
     indicator: 'Importaciones de fresa congelada (HS 081110)',
     unit: 't (toneladas)',
     type: 'benefit',
-    weight: 0.238,
-    percentage: 23.8
+    weight: 0.32315,
+    percentage: 32.32
   },
   {
     id: 'c3',
@@ -28,8 +28,8 @@ export const criteriaList: Criterion[] = [
     indicator: 'Logistics Performance Index - LPI',
     unit: '1-5',
     type: 'benefit',
-    weight: 0.168,
-    percentage: 16.8
+    weight: 0.21546,
+    percentage: 21.55
   },
   {
     id: 'c4',
@@ -38,9 +38,9 @@ export const criteriaList: Criterion[] = [
     indicator: 'Arancel efectivo aplicado al Perú',
     unit: '%',
     type: 'cost',
-    weight: 0.077,
-    percentage: 7.7
+    weight: 0.1554,
+    percentage: 15.54
   }
 ];
 
-export const FAHP_CR = 0.0386; // Consistent matrix indicator CR < 0.10
+export const FAHP_CR = 0.0059; // Consistent matrix indicator CR < 0.10

@@ -35,7 +35,7 @@ export const MarketDetail: React.FC<MarketDetailProps> = ({
   const maxArancel = Math.max(...allMarkets.map((m) => m.arancel));
 
   const normalizedData = [
-    { name: 'GFSI', raw: market.gfsi, value: parseFloat(((market.gfsi / maxGfsi) * 100).toFixed(1)), color: CHART_PALETTE.navy },
+    { name: 'Quality & Safety', raw: market.gfsi, value: parseFloat(((market.gfsi / maxGfsi) * 100).toFixed(1)), color: CHART_PALETTE.navy },
     { name: 'Importaciones', raw: market.importations.toLocaleString(), value: parseFloat(((market.importations / maxImport) * 100).toFixed(1)), color: CHART_PALETTE.slate },
     { name: 'LPI', raw: market.lpi.toFixed(2), value: parseFloat(((market.lpi / maxLpi) * 100).toFixed(1)), color: CHART_PALETTE.steel },
     { name: 'Arancel', raw: `${market.arancel}%`, value: maxArancel === 0 ? 0 : parseFloat(((market.arancel / maxArancel) * 100).toFixed(1)), color: CHART_PALETTE.silver },
@@ -50,10 +50,10 @@ export const MarketDetail: React.FC<MarketDetailProps> = ({
   };
 
   const indicators = [
-    { icon: Shield, code: 'C1', label: 'GFSI — Seguridad alimentaria', value: market.gfsi, source: 'Economist Impact (2022)', unit: '0–100' },
-    { icon: BarChart3, code: 'C2', label: 'Importaciones fresa congelada', value: `${market.importations.toLocaleString()} t`, source: 'UN Comtrade / WITS (2022)', unit: 'toneladas' },
+    { icon: Shield, code: 'C1', label: 'Quality and Safety — GFSI', value: market.gfsi, source: 'Economist Impact (2022)', unit: '0–100' },
+    { icon: BarChart3, code: 'C2', label: 'Importaciones fresa congelada', value: `${market.importations.toLocaleString()} t`, source: 'UN Comtrade / WITS (2023)', unit: 'toneladas' },
     { icon: Truck, code: 'C3', label: 'LPI — Desempeño logístico', value: market.lpi.toFixed(2), source: 'Banco Mundial (2023)', unit: '1–5' },
-    { icon: Percent, code: 'C4', label: 'Arancel efectivo (costo)', value: `${market.arancel}%`, source: 'MINCETUR / PROMPERÚ (2025–26)', unit: '%' },
+    { icon: Percent, code: 'C4', label: 'Arancel de referencia (costo)', value: `${market.arancel}%`, source: 'Matriz arancelaria del estudio (oct. 2026)', unit: '%' },
   ];
 
   return (

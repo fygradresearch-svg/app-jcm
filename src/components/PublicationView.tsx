@@ -210,7 +210,7 @@ export const PublicationView: React.FC<PublicationViewProps> = ({
               <div className="space-y-3">
                 <p className="section-eyebrow">Datos de entrada</p>
                 {[
-                  { icon: Shield, label: 'GFSI', value: activeMarket.gfsi.toFixed(1) },
+                  { icon: Shield, label: 'Quality & Safety', value: activeMarket.gfsi.toFixed(1) },
                   { icon: BarChart3, label: 'Importación', value: `${activeMarket.importations.toLocaleString()} t` },
                   { icon: Truck, label: 'LPI', value: activeMarket.lpi.toFixed(2) },
                   { icon: Percent, label: 'Arancel', value: `${activeMarket.arancel}%` },

@@ -13,14 +13,14 @@ export const Methodology: React.FC = () => {
     {
       title: 'FAHP (Fuzzy AHP)',
       subtitle: 'Ponderación de criterios',
-      description: 'Cálculo de la importancia relativa de cada criterio mediante matrices de comparación pareada difusa. Permite capturar la subjetividad experta asegurando consistencia matemática (CR = 0.0386 < 0.10).',
+      description: 'Cálculo de la importancia relativa de cada criterio mediante matrices de comparación pareada difusa. La matriz modal colectiva presentó consistencia matemática (CR = 0.0059 < 0.10).',
       icon: Layers,
       color: 'bg-slate-900 border-slate-800 text-white shadow-sm'
     },
     {
       title: 'Pesos de Criterios',
       subtitle: 'Pesos relativos (W)',
-      description: 'Vector final de ponderación: GFSI (51.7%), Importaciones (23.8%), LPI (16.8%) y Arancel (7.7%). Constituye la base paramétrica del modelo de recomendación.',
+      description: 'Vector final de ponderación: Quality and Safety (30.60%), Importaciones (32.32%), LPI (21.55%) y Arancel (15.54%). Constituye la base paramétrica del modelo de recomendación.',
       icon: Award,
       color: 'bg-slate-100 border-slate-200 text-slate-800'
     },
